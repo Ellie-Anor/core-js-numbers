@@ -431,13 +431,7 @@ function getNumberValue(number) {
  * '5'      => false
  */
 function isNumber(number) {
-  let res = false;
-  if (typeof number) {
-    if (Number.isFinite(number)) {
-      res = true;
-    }
-  }
-  return res;
+  return typeof number === 'number' && Number.isFinite(number);
 }
 
 /**
